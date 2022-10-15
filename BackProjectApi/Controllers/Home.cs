@@ -108,7 +108,7 @@ namespace BackProjectApi.Controllers
                     Cityid = model.Country,
                     logo = path
                 };
-
+                
                 //Normal way Using unitOfWork
                 //unitOfWork.CompanyInterface.AddCompany(company);
                 //await unitOfWork.SaveAscy();
