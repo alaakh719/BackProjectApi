@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BackProjectApi.Model.Company>
+
+
+<h2>companies information</h2>
+
+<p>
+    <a asp-action="addComapny" class="btn btn-info">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NameAr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.logo)
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameAr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.city.Name)
+                </td>
+
+                <td>
+                    <img src="~/uploads/@item.logo" style="width: 100px; height: 100px;" class="img-thumbnail" />
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
